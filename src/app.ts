@@ -4,9 +4,10 @@ export const registerOrder = (
     userId: "user1",
     quantity : 3.5,
     price: 306,
-    type: "SELL"}
+    type: "SELL"
+  };
 };
 
 export const cancelOrder = (id: string): boolean => {
-  return true
+  return true;
 };

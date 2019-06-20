@@ -11,7 +11,7 @@ export class Order {
     userId: string,
     quantity: number,
     price: number,
-    type: any,
+    type: any
   ) {
     this.id = v4();
     this.userId = userId;
