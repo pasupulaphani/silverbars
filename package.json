@@ -7,11 +7,32 @@
     "node": "10.15"
   },
   "scripts": {
-    "build": "rimraf dist && tsc"
+    "build": "rimraf dist && tsc",
+    "test": "jest"
   },
   "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/uuid": "^3.4.4",
+    "jest": "24.7.1",
     "rimraf": "^2.6.3",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.2",
+    "ts-jest": "^24.0.2"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "jest": {
+    "verbose": false,
+    "roots": [
+      "src"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json",
+      "node"
+    ],
+    "useStderr": true
+  }
 }
