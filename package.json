@@ -1,0 +1,15 @@
+{
+  "name": "silverbars",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "engines": {
+    "node": "10.15"
+  },
+  "scripts": {
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
