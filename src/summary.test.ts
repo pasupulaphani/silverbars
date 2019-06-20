@@ -38,16 +38,16 @@ describe("getSummary", () => {
     });
 
     it("aggregates all same price orders", () => {
-      const result = getSummary("SELL").find(s => s.priceInGBP === 5);
+      const result = getSummary("SELL");
 
-      expect(result && result.totalQuantityInKG).toBe(7);
+      expect(result[0]).toBe("7 kg for £5");
     });
 
     it("put lowest price order first", () => {
       const result = getSummary("SELL");
 
-      expect(result[0].priceInGBP).toBe(5);
-      expect(result[1].priceInGBP).toBe(6);
+      expect(result[0]).toBe("7 kg for £5");
+      expect(result[1]).toBe("6 kg for £6");
     });
   });
 
@@ -59,16 +59,16 @@ describe("getSummary", () => {
     });
 
     it("aggregates all same price orders", () => {
-      const result = getSummary("BUY").find(s => s.priceInGBP === 5);
+      const result = getSummary("BUY");
 
-      expect(result && result.totalQuantityInKG).toBe(7);
+      expect(result[1]).toBe("7 kg for £5");
     });
 
     it("put highest price order first", () => {
       const result = getSummary("BUY");
 
-      expect(result[0].priceInGBP).toBe(6);
-      expect(result[1].priceInGBP).toBe(5);
+      expect(result[0]).toBe("6 kg for £6");
+      expect(result[1]).toBe("7 kg for £5");
     });
   });
 });

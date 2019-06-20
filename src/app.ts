@@ -23,7 +23,7 @@ export const registerOrder = (
     throw new InvalidPriceError("Order price should be a positive number");
   }
 
-  const type = OrderType[orderType]
+  const type = OrderType[orderType];
   if (!type) throw new InvalidOrderError("Order type is invalid: " + type);
 
   const order: Order = new Order(
