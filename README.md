@@ -13,8 +13,9 @@ See file problem.pdf
 ###### Install
 
 ```
-    npm install <git-repo>
+    npm install silverbars
 ```
+> Published the lib to npmjs
 
 ###### API
 
