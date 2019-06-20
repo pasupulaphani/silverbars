@@ -5,7 +5,10 @@ describe("app", () => {
     it("create and save an order", () => {
       const result = registerOrder()
 
-      expect(result).toBe({});
+      expect(result).toEqual({userId: "user1",
+      quantity : 3.5,
+      price: 306,
+      type: "SELL"});
     });
   });
 

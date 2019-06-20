@@ -7,7 +7,14 @@
     "rootDir": "src",
     "outDir": "dist",
     "lib": ["esnext", "dom"],
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
