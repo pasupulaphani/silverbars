@@ -5,6 +5,7 @@ import { CurrencyCode } from "./enum/CurrencyCode";
 import { MeasureUnit } from "./enum/MeasureUnit";
 import { OrderType } from "./enum/OrderType";
 import { Order } from "./Order";
+import { InvalidOrderError } from "./errors/InvalidOrderError";
 
 export const registerOrder = (
   userId: string,
@@ -22,11 +23,14 @@ export const registerOrder = (
     throw new InvalidPriceError("Order price should be a positive number");
   }
 
+  const type = OrderType[orderType]
+  if (!type) throw new InvalidOrderError("Order type is invalid: " + type);
+
   const order: Order = new Order(
     userId,
     quantityInKg,
     pricePerKg,
-    OrderType[orderType],
+    type,
     MeasureUnit.KILOGRAM,
     CurrencyCode.GBP
   );
