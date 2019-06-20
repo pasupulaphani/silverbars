@@ -1,3 +1,7 @@
+import { CurrencyCode } from "./enum/CurrencyCode";
+import { MeasureUnit } from "./enum/MeasureUnit";
+import { OrderType } from "./enum/OrderType";
+
 import { Order } from "./Order";
 
 describe("Order", () => {
@@ -12,7 +16,9 @@ describe("Order", () => {
       userId,
       quantity,
       price,
-      "SELL"
+      OrderType.SELL,
+      MeasureUnit.KILOGRAM,
+      CurrencyCode.GBP
     );
   });
 
@@ -33,6 +39,14 @@ describe("Order", () => {
   });
 
   it("sets type property", () => {
-    expect(order.type).toBe("SELL");
+    expect(order.type).toBe(OrderType.SELL);
+  });
+
+  it("sets measureUnit property", () => {
+    expect(order.measureUnit).toBe(MeasureUnit.KILOGRAM);
+  });
+
+  it("sets currencyCode property", () => {
+    expect(order.currencyCode).toBe(CurrencyCode.GBP);
   });
 });
