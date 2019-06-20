@@ -8,6 +8,10 @@ See file problem.pdf
 2. Price per kg can be only a positive number
 3. Anyone can cancel an order.
 
+### IMPLEMENTATION
+- Built using typescript as it could help in building robust app for large JS apps.
+- Modules are abstracted to provide separation of concern. This will help us with extensibility and reusability.
+
 ### USAGE
 
 ###### Install
@@ -15,7 +19,7 @@ See file problem.pdf
 ```
     npm install silverbars
 ```
-> Published the lib to npmjs
+> Published the lib to npmjs: https://www.npmjs.com/package/silverbars
 
 ###### API
 
